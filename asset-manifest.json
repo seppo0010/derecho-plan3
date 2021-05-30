@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/derecho-plan3/static/css/main.a672b262.chunk.css",
+    "main.js": "/derecho-plan3/static/js/main.186921d8.chunk.js",
+    "main.js.map": "/derecho-plan3/static/js/main.186921d8.chunk.js.map",
+    "runtime-main.js": "/derecho-plan3/static/js/runtime-main.1a9f1d17.js",
+    "runtime-main.js.map": "/derecho-plan3/static/js/runtime-main.1a9f1d17.js.map",
+    "static/js/2.11b33977.chunk.js": "/derecho-plan3/static/js/2.11b33977.chunk.js",
+    "static/js/2.11b33977.chunk.js.map": "/derecho-plan3/static/js/2.11b33977.chunk.js.map",
+    "static/js/3.c51f46f6.chunk.js": "/derecho-plan3/static/js/3.c51f46f6.chunk.js",
+    "static/js/3.c51f46f6.chunk.js.map": "/derecho-plan3/static/js/3.c51f46f6.chunk.js.map",
+    "index.html": "/derecho-plan3/index.html",
+    "static/css/main.a672b262.chunk.css.map": "/derecho-plan3/static/css/main.a672b262.chunk.css.map",
+    "static/js/2.11b33977.chunk.js.LICENSE.txt": "/derecho-plan3/static/js/2.11b33977.chunk.js.LICENSE.txt",
+    "static/media/main.6a8fc0df.dot": "/derecho-plan3/static/media/main.6a8fc0df.dot"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a9f1d17.js",
+    "static/js/2.11b33977.chunk.js",
+    "static/css/main.a672b262.chunk.css",
+    "static/js/main.186921d8.chunk.js"
+  ]
+}

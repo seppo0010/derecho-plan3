@@ -1,0 +1,46 @@
+digraph {
+    131[label="Teoría General del Derecho" fillcolor="green" style="filled"]
+    132[label="Teoría del Estado" fillcolor="green" style="filled"]
+    133[label="Derechos Humanos y Garantías" fillcolor="green" style="filled"]
+    134[label="Elementos de Derecho Constitucional"]
+    135[label="Elementos de Derecho Civil (Parte General)" fillcolor="green" style="filled"]
+    136[label="Obligaciones Civiles y Comerciales"]
+    145[label="Elementos de Derecho Comercial"]
+    137[label="Contratos Civiles y Comerciales"]
+    138[label="Elementos de Derecho Procesal Civil y Comercial"]
+    139[label="Elementos de Derecho Penal y de Procesal Penal"]
+    140[label="Elementos de Derechos Reales"]
+    141[label="Elementos de Derecho Administrativo"]
+    142[label="Elementos de Derecho del Trabajo y de la Seguridad Social"]
+    144[label="Elementos de Análisis Económico y Financiero" fillcolor="green" style="filled"]
+    163[label="Derecho Internacional Público"]
+    162[label="Sociedades Civiles y Comerciales"]
+    167[label="Derecho de Familia y Sucesiones"]
+    169[label="Derecho Internacional Privado"]
+    168[label="Finanzas Públicas y Derecho Tributario"]
+    131->139
+    139->168
+    132->134
+    134->141
+    134->142
+    137->142
+    134->163
+    141->168
+    133->141
+    133->139
+    136->141
+    162->168
+    145->162
+    137->162
+    136->137
+    136->138
+    135->136
+    137->163
+    133->163
+    145->169
+    167->169
+    137->167
+    140->167
+    135->145
+    136->140
+}
