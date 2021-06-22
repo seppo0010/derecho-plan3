@@ -18,7 +18,7 @@ const nodeToIndexMap = Object.fromEntries(nodes.map((n, i) => [n.node_id.id, i])
 const indexToNodeMap = Object.fromEntries(nodes.map((n, i) => [i, n]))
 
 const options: Set<number> = new Set();
-combinations(Object.values(nodeToIndexMap)).forEach((comb: number[]) => { let numb = 0
+combinations(Object.values(nodeToIndexMap), 0, 3).forEach((comb: number[]) => { let numb = 0
   comb.forEach((i) => {
     numb |= 1 << (i)
   })
@@ -43,10 +43,10 @@ for (let i = 0; i < edges.length; i++) {
 const tasks: ((resolve: Function, reject: Function) => void)[] = []
 const jpg = fs.readFileSync('../acercade_correlatividades.jpg').toString('base64')
 options.forEach(async (o: number) => {
-  if (o > 200) return;
   const selectedNodes = []
   for (let i = 0; i < nodes.length; i++) {
-    if ((o & i) === 0) {
+    const node = nodes[i]
+    if ((1 << i) & o) {
       selectedNodes.push(indexToNodeMap[i])
     }
   }
@@ -57,21 +57,15 @@ options.forEach(async (o: number) => {
     return `<rect x="${r[0]}" y="${r[1]}" width="${r[2]}" height="${r[3]}" fill="red" fill-opacity="0.7" rx="22" ry="22" />`
   }).join('') + '</svg>'
   tasks.push((resolve, reject) => {
-    const p = child_process.exec(`inkscape -w 1406 -h 946 -p -o images/${o}.png`, (error, stdout, stderr) => {
-      if (error) {
-        reject(error);
-        return
-      }
-    })
+    const p = child_process.spawn('inkscape', ['-w', '1406', '-h', '946', '-p', '-o', `images/${o}.png`])
     if (!p.stdin) {
       reject('child process failed')
       return
     }
     p.stdin.end(svg, 'utf-8');
-    p.on('end', () => { console.log('resolving'); resolve(o) })
+    p.on('close', () => resolve(o))
   })
 });
-console.log(tasks.length);
 
 (async () => {
   for (let i = 0; i < tasks.length; i++) {
