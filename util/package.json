@@ -20,6 +20,7 @@
   "homepage": "https://github.com/seppo0010/derecho-plan3#readme",
   "devDependencies": {
     "@types/node": "^15.12.4",
+    "@types/sharp": "^0.28.3",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.4"
   },

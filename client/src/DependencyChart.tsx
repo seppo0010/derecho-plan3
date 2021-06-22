@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from './store'
 import { toggleSubject } from './subjectsStatus'
 import { getGraphData, GraphData } from './plan'
-import { subjectsRect, canDo } from './dependencyChartData'
+import { subjectsRect } from './dependencyChartData'
+import { canDo } from './canDo'
 import acercade_correlatividades from './acercade_correlatividades.jpg'
 import { Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';

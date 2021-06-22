@@ -1,6 +1,4 @@
-import { GraphData } from './plan'
-
-const subjectsRect = {
+const subjectsRect: {[key: string]: [number, number, number, number]} = {
   131: [268, 201, 136, 62],
   144: [266, 358, 136, 62],
   132: [268, 551, 136, 62],
@@ -21,12 +19,4 @@ const subjectsRect = {
   169: [1187, 552, 134, 60],
   168: [1187, 255, 134, 60],
 };
-const canDo = (subject: number | string, checked: Set<string>, graphData: GraphData) => {
-  subject = subject.toString()
-  if (checked.has(subject)) {
-    return false;
-  }
-  const requirements = graphData.edges.filter((e) => e.to.toString() === subject).map((e) => e.from.toString())
-  return requirements.every((requirement) => checked.has(requirement))
-}
-export { subjectsRect, canDo };
+export { subjectsRect };
